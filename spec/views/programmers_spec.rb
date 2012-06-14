@@ -1,3 +1,5 @@
+require './spec/spec_helper'
+
 require './programmer'
 require './views/programmers'
 
@@ -19,7 +21,7 @@ describe Programmers do
     ')
   end
 
-  it 'will render a single programmer in a table' do
+  it 'will render multiple programmers in a table' do
     programmers = [Programmer.new('fred', ['Java'], ['bob']), 
                    Programmer.new('mark', ['python'], ['fred','bob'])]
 
@@ -32,9 +34,5 @@ describe Programmers do
       +------+--------+-----------------+
       2 rows in set
     ')
-  end
-
-  def the_table str
-    str.strip.gsub /^ {6}/, ''
   end
 end

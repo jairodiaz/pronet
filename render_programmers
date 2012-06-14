@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require './xmlparser'
+require './views/programmers'
+
+programmers = retrieve_programmers(ARGV[0])
+puts Programmers.new(programmers).render
