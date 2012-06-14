@@ -1,8 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    hirb (0.6.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  hirb
