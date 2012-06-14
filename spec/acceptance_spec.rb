@@ -1,8 +1,8 @@
 require './spec/spec_helper'
 
 describe 'displaying the programmers' do
-  it 'should render the XML file' do
-    `./render_programmers ProNet.xml`.strip.should == the_table('
+  it 'should render the programmers in the XML file' do
+    `./render_programmers fixtures/ProNet.xml`.strip.should == the_table('
       +-------+-----------------+------------------------+
       | name  | skills          | recommendations        |
       +-------+-----------------+------------------------+
@@ -18,6 +18,20 @@ describe 'displaying the programmers' do
       | Stu   | C++, Perl       | Frank                  |
       +-------+-----------------+------------------------+
       10 rows in set
+    ')
+  end
+
+  it 'should render the kudos of the simple example' do
+    pending
+
+    `./render_kudos fixtures/simple.xml`.strip.should == the_table('
+      +------+-------+
+      | name | kudos |
+      +------+-------+
+      | A    | 1     |
+      | B    | 1     |
+      +------+-------+
+      2 rows in set
     ')
   end
 end
