@@ -7,9 +7,9 @@ describe Programmers do
   end
 
   it 'will render a single programmer in a table' do
-    programmer = Programmer.new 'fred', ['Java'], ['bob']
+    programmers = [Programmer.new('fred', ['Java'], ['bob'])]
 
-    Programmers.new([programmer]).render.should == the_table('
+    Programmers.new(programmers).render.should == the_table('
       +------+--------+-----------------+
       | name | skills | recommendations |
       +------+--------+-----------------+
