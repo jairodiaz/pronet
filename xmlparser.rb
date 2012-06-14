@@ -1,10 +1,8 @@
 require 'xmlsimple'
 require './programmer'
 
-def retrieve_programmers (filename)
-	file = File.open(filename)
-	ref  = XmlSimple.xml_in(file)
-
+def retrieve_programmers_data(buffer)
+	ref  = XmlSimple.xml_in(buffer)
 	programmer_list = ref['Programmer']
 	programmer_list.collect { |programmer_element|
 		name = programmer_element['name']
@@ -12,4 +10,9 @@ def retrieve_programmers (filename)
 		skills = programmer_element['Skills'][0]['Skill']
 		Programmer.new name, skills, recommendations
   }
+end
+
+def retrieve_programmers(filename)
+	file = File.open(filename)
+	retrieve_programmers_data(file)
 end
