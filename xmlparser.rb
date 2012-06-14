@@ -1,5 +1,4 @@
 require 'xmlsimple'
-require 'awesome_print'
 require './programmer'
 
 def retrieve_programmers (filename)
@@ -15,5 +14,3 @@ def retrieve_programmers (filename)
 	end
 	programmer_array
 end
-
-ap retrieve_programmers '/Users/jairodiaz/GitHub/pronet/ProNet.xml'
