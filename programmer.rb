@@ -7,3 +7,6 @@ class Programmer
     @recommendations = recommendations
   end
 end
+
+class ProgrammerWithRelationships
+end
