@@ -1,3 +1,5 @@
+require 'hirb'
+
 class Kudos
   def initialize programmers 
     @programmers = programmers

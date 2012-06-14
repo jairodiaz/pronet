@@ -22,14 +22,14 @@ describe 'displaying the programmers' do
   end
 
   it 'should render the kudos of the simple example' do
-    pending
+  
 
     `./render_kudos fixtures/simple.xml`.strip.should == the_table('
       +------+-------+
       | name | kudos |
       +------+-------+
-      | A    | 1     |
       | B    | 1     |
+      | A    | 1     |
       +------+-------+
       2 rows in set
     ')

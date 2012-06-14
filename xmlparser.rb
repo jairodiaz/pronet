@@ -12,7 +12,24 @@ def retrieve_programmers_data(buffer)
   }
 end
 
+
 def retrieve_programmers(filename)
 	file = File.open(filename)
 	retrieve_programmers_data(file)
 end
+
+
+def retrieve_programmers_with_kudos(filename)
+	file = File.open(filename)
+	retrieve_programmers_data_with_kudos(file)
+end
+
+def retrieve_programmers_data_with_kudos(buffer)
+	programmers = retrieve_programmers_data(buffer)
+
+	programmers.collect { |programmer|
+		ProgrammerWithKudos.new(programmer, 1)
+	}
+end
+
+

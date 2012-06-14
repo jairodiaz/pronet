@@ -3,5 +3,5 @@
 require './xmlparser'
 require './views/kudos'
 
-programmers = retrieve_programmers(ARGV[0])
+programmers = retrieve_programmers_with_kudos(ARGV[0])
 puts Kudos.new(programmers).render
