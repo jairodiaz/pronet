@@ -9,8 +9,10 @@ class PageRankCalculator
     end
 
     def calculate_pagerank 
-        @programmers.programmers.each_entry do |programmer|
-            calculate_pagerank_for programmer
+        15.times do
+            @programmers.programmers.each_entry do |programmer|
+                calculate_pagerank_for programmer
+            end
         end
     end
 
@@ -21,7 +23,7 @@ class PageRankCalculator
             sum += recommender.kudos / recommender.recommendations.length
         end
 
-        return (1 - DAMPENER) + (DAMPENER * sum)
+        programmer.kudos = (1 - DAMPENER) + (DAMPENER * sum)
     end
 end
 
