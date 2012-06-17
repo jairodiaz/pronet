@@ -27,6 +27,8 @@ end
 def retrieve_programmers_data_with_kudos(buffer)
 	programmers = retrieve_programmers_data(buffer)
 
+    return programmers
+
 	programmers.collect { |programmer|
 		ProgrammerWithKudos.new(programmer, 1)
 	}
