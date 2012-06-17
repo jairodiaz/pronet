@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Network>
+  <Programmer name="A">
+    <Recommendations>
+      <Recommendation>B</Recommendation>
+      <Recommendation>C</Recommendation>
+    </Recommendations>
+    <Skills/>
+  </Programmer>
+  <Programmer name="B">
+    <Recommendations>
+      <Recommendation>C</Recommendation>
+    </Recommendations>
+    <Skills/>
+  </Programmer>
+  <Programmer name="C">
+    <Recommendations>
+      <Recommendation>A</Recommendation>
+    </Recommendations>
+    <Skills/>
+  </Programmer>
+  <Programmer name="D">
+    <Recommendations>
+      <Recommendation>C</Recommendation>
+    </Recommendations>
+    <Skills/>
+  </Programmer>
+</Network>
