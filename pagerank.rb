@@ -9,7 +9,7 @@ class PageRankCalculator
     end
 
     def calculate_pagerank 
-        20.times do
+        5.times do
             @programmers.programmers.each_entry do |programmer|
                 calculate_pagerank_for programmer
             end
