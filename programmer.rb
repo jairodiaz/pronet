@@ -1,6 +1,6 @@
 class Programmer
   attr_reader :name, :skills, :recommendations
-  attr_accessor: :kudos
+  attr_accessor :kudos
 
   def initialize name, skills, recommendations
     @name = name
