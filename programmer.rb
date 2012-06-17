@@ -1,10 +1,12 @@
 class Programmer
   attr_reader :name, :skills, :recommendations
+  attr_accessor: :kudos
 
   def initialize name, skills, recommendations
     @name = name
     @skills = skills
     @recommendations = recommendations
+    @kudos = 1
   end
 end
 
