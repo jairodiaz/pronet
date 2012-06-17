@@ -2,6 +2,11 @@
 
 require './xmlparser'
 require './views/kudos'
+require './pagerank'
 
-programmers = retrieve_programmers_with_kudos(ARGV[0])
-puts Kudos.new(programmers).render
+programmers = Programmers.new(retrieve_programmers_with_kudos(ARGV[0]))
+
+calculator = PageRankCalculator.new programmers
+calculator.calculate_pagerank
+
+puts Kudos.new(programmers.programmers).render
